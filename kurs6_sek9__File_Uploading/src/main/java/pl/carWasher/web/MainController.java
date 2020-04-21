@@ -33,12 +33,16 @@ public class MainController {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("index");
 		
-		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-		simpleMailMessage.setTo("jaceksysiak@wp.pl");
-		simpleMailMessage.setCc("j4sysiak@gmail.com");
-		simpleMailMessage.setText("TEST MESSAGE");
 		
-		javaMailSender.send(simpleMailMessage);
+		// w lokalizacji:  c:\Users\Jacek\Documents\JAVA\lib\
+		// jest plik: fakeSMTP-2.0.jar
+		//odpal to z polecenia:   java -jar fakeSMTP-2.0.jar
+//		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+//		simpleMailMessage.setTo("jaceksysiak@wp.pl");
+//		simpleMailMessage.setCc("j4sysiak@gmail.com");
+//		simpleMailMessage.setText("TEST MESSAGE");
+//		
+//		javaMailSender.send(simpleMailMessage);
 		
 		return modelAndView;
 	}

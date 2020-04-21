@@ -9,11 +9,30 @@
 </head>
 <body>
 
-	<h1>Index Page Wow</h1>
+	<h1>Index Page</h1>
+
+	<form action="upload" method="post" enctype="multipart/form-data">
+		Choose file: <input type="file" name="file" /> <input type="submit"
+			value="upload" />
+	</form>
+	</br>
+	
+	
+	<font color="green">
+		<c:if test="${not empty file}">
+		
+			<a href="download/${file.originalFilename}">Click for download ${file.originalFilename}</a>
+		
+		</c:if>
+	
+	
+	</font>
+	
+	
 
 	<form action="logout" method="post">
-		<input type="submit" value="logout" /> 
-		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+		<input type="submit" value="logout" /> <input type="hidden"
+			name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
 	</br>
 
